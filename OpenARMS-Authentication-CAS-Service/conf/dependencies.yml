@@ -5,11 +5,21 @@ require:
     - play -> crud
     - play -> secure
     - org.jasig.cas.client -> cas-client-core 3.2.1
-    - development -> OpenARMS-Service 0.3
+    - OpenARMS -> OpenARMS-API 0.3
+    - OpenARMS -> OpenARMS-Service 0.3
 
 repositories:
-    - development.service:
+    - OpenARMS:
         type:       local
-        artifact:   "${application.path}/../OpenARMS/Service/dist/[module]-[revision].zip"
+        artifact:   "/home/creen/Projects/OpenARMS/[module]"
         contains:
-            - development -> OpenARMS-Service
+            - OpenARMS -> OpenARMS-API
+            - OpenARMS -> OpenARMS-Service
+            - OpenARMS -> OpenARMS-Frontend
+    - OpenARMS-CAS:
+        type:       local
+        artifact:   "/home/creen/Projects/OpenARMS/OpenARMS-Authentication-CAS/[module]"
+        contains:
+            - OpenARMS -> OpenARMS-Authentication-CAS-API
+            - OpenARMS -> OpenARMS-Authentication-CAS-Service
+            - OpenARMS -> OpenARMS-Authentication-CAS-Frontend
