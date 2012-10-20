@@ -1,10 +1,10 @@
 # Here you can create play commands that are specific to the module, and extend existing commands
 
-MODULE = 'OpenARMS-Authentication-CAS'
+MODULE = 'OpenARMS-Authentication-CAS-API'
 
 # Commands that are specific to your module
 
-COMMANDS = ['OpenARMS-Authentication-CAS:hello']
+COMMANDS = ['OpenARMS-Authentication-CAS-API:hello']
 
 def execute(**kargs):
     command = kargs.get("command")
@@ -12,7 +12,7 @@ def execute(**kargs):
     args = kargs.get("args")
     env = kargs.get("env")
 
-    if command == "OpenARMS-Authentication-CAS:hello":
+    if command == "OpenARMS-Authentication-CAS-API:hello":
         print "~ Hello"
 
 
