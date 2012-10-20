@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="OpenARMS-Authentication-CAS" default="build" basedir=".">
+<project name="OpenARMS-Authentication-CAS-Service" default="build" basedir=".">
 
     <target name="check" unless="play.path">
         <fail message="Please specify Play framework path using -Dplay.path=/path/to/framework/home" />
@@ -29,10 +29,10 @@
                 <include name="**/play.static"/>
             </fileset>
         </copy>
-        <jar destfile="lib/play-OpenARMS-Authentication-CAS.jar" basedir="tmp/classes">
+        <jar destfile="lib/play-OpenARMS-Authentication-CAS-Service.jar" basedir="tmp/classes">
             <manifest>
                 <section name="Play-module">
-                    <attribute name="Specification-Title" value="OpenARMS-Authentication-CAS"/>
+                    <attribute name="Specification-Title" value="OpenARMS-Authentication-CAS-Service"/>
                 </section>
             </manifest>
         </jar>
