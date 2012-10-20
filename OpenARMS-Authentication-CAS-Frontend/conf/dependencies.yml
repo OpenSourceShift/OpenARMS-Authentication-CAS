@@ -3,6 +3,7 @@ self: play -> OpenARMS-Authentication-CAS-Frontend 0.1
 require:
     - play 1.2.5
     - OpenARMS -> OpenARMS-API 0.3
+    - OpenARMS -> OpenARMS-Frontend 0.3
     - OpenARMS -> OpenARMS-Authentication-CAS-API 0.1
 
 repositories:
