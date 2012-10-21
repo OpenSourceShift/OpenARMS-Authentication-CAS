@@ -23,7 +23,7 @@ public class CASAuthenticationFrontend extends BaseAuthenticationFrontend {
 	public static void authenticate(String ticket) {
 		URL serviceUrl = null;
 		try {
-			String service = Router.getFullUrl("authentication.CASAuthentication.authenticate");
+			String service = Router.getFullUrl("authentication.cas.CASAuthenticationFrontend.authenticate");
 			serviceUrl = new URL(service);
 		} catch (MalformedURLException e) {
 			error(new RuntimeException("Couldn't convert the service to a URL.", e));
@@ -46,5 +46,9 @@ public class CASAuthenticationFrontend extends BaseAuthenticationFrontend {
 				APIClient.deauthenticate();
 			}
 		}
+	}
+	
+	public static void showform() {
+		render();
 	}
 }

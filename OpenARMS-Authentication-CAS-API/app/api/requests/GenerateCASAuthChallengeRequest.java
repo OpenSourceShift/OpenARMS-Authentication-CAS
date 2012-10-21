@@ -2,6 +2,8 @@ package api.requests;
 
 import java.net.URL;
 
+import play.Logger;
+
 import api.responses.GenerateCASAuthChallengeResponse;
 import api.responses.Response;
 

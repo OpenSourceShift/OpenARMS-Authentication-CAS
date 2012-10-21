@@ -47,6 +47,8 @@ public class CASAuthenticationBackend extends AuthenticationBackend {
 	public static Class<? extends AuthenticateUserRequest> getAuthenticateUserRequestClass() throws Exception {
 		return CASAuthenticateUserRequest.class;
 	}
+	
+	public final static String SERVER_URL_CONFIG_PARAM = "openarms.authentication.backends.cas.serverUrl";
 
 	/**
 	 * Method that authenticates the user to access the system.
@@ -60,7 +62,7 @@ public class CASAuthenticationBackend extends AuthenticationBackend {
 			CASAuthenticateUserRequest request = (CASAuthenticateUserRequest) req;
 			Logger.debug("I got a CAS Authentication request - with ticket = %s", request.ticket);
 
-			String serverUrl = (String) Play.configuration.get("openarms.authentication.cas.serverUrl");
+			String serverUrl = (String) Play.configuration.get(SERVER_URL_CONFIG_PARAM);
 			if(request.service == null) {
 				throw new RuntimeException("The CAS challenge request needs a service URL.");
 			}
@@ -125,7 +127,7 @@ public class CASAuthenticationBackend extends AuthenticationBackend {
 			Logger.debug("Generating a cas authentication challenge.");
 			GenerateCASAuthChallengeResponse response = new GenerateCASAuthChallengeResponse();
 
-			String serverUrl = (String) Play.configuration.get("openarms.authentication.cas.serverUrl");
+			String serverUrl = (String) Play.configuration.get(SERVER_URL_CONFIG_PARAM);
 			if(request.service == null) {
 				throw new RuntimeException("The CAS challenge request needs a service URL.");
 			}
