@@ -4,3 +4,12 @@
 bin/
 modules/
 eclipse/
+
+# Virtual eclipse folders 
+OpenARMS-Authentication-CAS-API/
+OpenARMS-Authentication-CAS-Frontend/
+OpenARMS-Authentication-CAS-Service/
+OpenARMS-API/
+OpenARMS-Service/
+OpenARMS-Frontend/
+
