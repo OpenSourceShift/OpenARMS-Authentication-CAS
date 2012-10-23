@@ -14,5 +14,7 @@ OpenARMS-Authentication-CAS-Service/
 OpenARMS-API/
 OpenARMS-Service/
 OpenARMS-Frontend/
+/crud
+/secure
 /conf/crud
 /conf/secure
